@@ -2,146 +2,179 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import TypewriterText from "@/components/TypewriterText";
-import ParticleBackground from "@/components/ParticleBackground";
+import NeuralBackground from "@/components/NeuralBackground";
+import GlitchText from "@/components/GlitchText";
+import TerminalWindow from "@/components/TerminalWindow";
+import CodeSnippet from "@/components/CodeSnippet";
 import AnimatedSection from "@/components/AnimatedSection";
 import SEOHead from "@/components/SEOHead";
-import { Download, Github, Linkedin, ArrowRight, Code2, Zap, Users } from "lucide-react";
+import { Download, Github, Linkedin, ArrowRight, Brain, Zap, Cpu, Terminal, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Index = () => {
   const typewriterTexts = [
-    "AI-powered tools",
-    "full-stack solutions", 
-    "intelligent automation",
-    "scalable applications",
+    "intelligent automation systems",
+    "neural network architectures", 
+    "scalable AI infrastructures",
+    "competitive algorithms",
+    "full-stack innovations"
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
       <SEOHead 
         title="Priyanshu Chawda - AI & Full-Stack Developer | Portfolio"
         description="AI & Full-Stack Developer creating intelligent solutions. Expert in Python, React, Machine Learning, and modern web technologies. Available for freelance projects."
         keywords="Priyanshu Chawda, AI Developer, Full-Stack Developer, Machine Learning, Python, React, Portfolio, Freelance"
       />
-      <ParticleBackground />
+      <NeuralBackground />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
-            >
-              Priyanshu Chawda
-            </motion.h1>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="text-xl md:text-2xl text-muted-foreground mb-8 h-16"
-            >
-              I build{" "}
-              <TypewriterText
-                texts={typewriterTexts}
-                className="text-primary font-semibold"
-              />
-              <br />
-              that solve real-world problems.
-            </motion.div>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
-            >
-              AI & Full-Stack Developer | Open-Source Contributor | Competitive Programmer
-            </motion.p>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-            >
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 hover:scale-105 transition-all duration-300">
-                <Link to="/projects">
-                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="hover:scale-105 transition-all duration-300">
-                <Link to="/resume">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild className="hover:scale-105 transition-all duration-300">
-                <Link to="/contact">
-                  Contact Me
-                </Link>
-              </Button>
-            </motion.div>
+      {/* Cyberpunk Hero Section */}
+      <section className="pt-32 pb-20 px-4 relative">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="space-y-6"
+              >
+                <div className="text-sm font-mono text-cyan-400 dark:text-cyan-300 tracking-wider">
+                  &gt; SYSTEM INITIALIZED
+                </div>
+                
+                <h1 className="text-6xl md:text-8xl font-black leading-none">
+                  <GlitchText 
+                    text="PRIYANSHU" 
+                    className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    glitchChance={0.01}
+                  />
+                  <GlitchText 
+                    text="CHAWDA" 
+                    className="block bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+                    glitchChance={0.01}
+                  />
+                </h1>
+                
+                <div className="text-xl md:text-2xl font-mono">
+                  <span className="text-green-400">&gt; </span>
+                  <span className="text-muted-foreground">Building </span>
+                  <TypewriterText
+                    texts={typewriterTexts}
+                    className="text-cyan-400 dark:text-cyan-300 font-bold"
+                  />
+                </div>
+                
+                <div className="flex items-center gap-4 text-sm font-mono text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span>AI_SYSTEMS: ONLINE</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    <span>FULL_STACK: READY</span>
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                className="flex flex-wrap gap-4"
+              >
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-black font-bold border-0 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25"
+                >
+                  <Link to="/projects">
+                    <Terminal className="mr-2 h-5 w-5" />
+                    VIEW_PROJECTS.exe
+                  </Link>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  asChild 
+                  className="border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/resume">
+                    <Download className="mr-2 h-4 w-4" />
+                    RESUME.pdf
+                  </Link>
+                </Button>
+                
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  asChild 
+                  className="border-purple-400/50 text-purple-400 hover:bg-purple-400/10 hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/contact">
+                    <Sparkles className="mr-2 h-4 w-4" />
+                    CONTACT.init()
+                  </Link>
+                </Button>
+              </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
-              className="flex justify-center space-x-6"
-            >
-              <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300">
-                <a href="https://github.com/priyanshuchawda" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-6 w-6" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300">
-                <a href="https://linkedin.com/in/priyanshuchawda" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="h-6 w-6" />
-                </a>
-              </Button>
-            </motion.div>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9, ease: "easeOut" }}
+                className="flex gap-6"
+              >
+                <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300 text-cyan-400 hover:text-cyan-300">
+                  <a href="https://github.com/priyanshuchawda" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-6 w-6" />
+                  </a>
+                </Button>
+                <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300 text-cyan-400 hover:text-cyan-300">
+                  <a href="https://linkedin.com/in/priyanshuchawda" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                </Button>
+              </motion.div>
+            </div>
+
+            <div className="flex flex-col gap-8 items-center">
+              <TerminalWindow />
+              <CodeSnippet />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Neural Network Stats */}
       <AnimatedSection delay={0.2}>
         <section className="py-20 px-4">
           <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Combining cutting-edge AI technology with full-stack development to create intelligent solutions
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {[
                 {
-                  icon: Code2,
-                  title: "AI Development",
-                  description: "Building intelligent systems using machine learning, natural language processing, and computer vision",
-                  gradient: "from-blue-500 to-cyan-500"
+                  icon: Brain,
+                  value: "50+",
+                  label: "AI_MODELS_DEPLOYED",
+                  color: "cyan"
+                },
+                {
+                  icon: Cpu,
+                  value: "1500+", 
+                  label: "ALGORITHMS_SOLVED",
+                  color: "purple"
                 },
                 {
                   icon: Zap,
-                  title: "Full-Stack Solutions", 
-                  description: "End-to-end web applications with modern technologies, scalable architecture, and seamless user experiences",
-                  gradient: "from-purple-500 to-pink-500"
-                },
-                {
-                  icon: Users,
-                  title: "Consultation",
-                  description: "Strategic technical guidance and architecture planning for your next big project or startup idea",
-                  gradient: "from-green-500 to-teal-500"
+                  value: "99.9%",
+                  label: "SYSTEM_UPTIME",
+                  color: "green"
                 }
-              ].map((feature, index) => (
+              ].map((stat, index) => (
                 <motion.div
-                  key={feature.title}
+                  key={stat.label}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -149,15 +182,17 @@ const Index = () => {
                   whileHover={{ scale: 1.05 }}
                   className="group"
                 >
-                  <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300 h-full">
+                  <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-cyan-500/50 transition-all duration-300">
                     <CardContent className="p-8 text-center">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        <feature.icon className="h-8 w-8 text-white" />
+                      <div className={`w-16 h-16 bg-gradient-to-r ${
+                        stat.color === 'cyan' ? 'from-cyan-500 to-blue-500' :
+                        stat.color === 'purple' ? 'from-purple-500 to-pink-500' :
+                        'from-green-500 to-emerald-500'
+                      } rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                        <stat.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                      <p className="text-muted-foreground">
-                        {feature.description}
-                      </p>
+                      <div className="text-3xl font-bold font-mono text-white mb-2">{stat.value}</div>
+                      <div className="text-sm font-mono text-gray-400">{stat.label}</div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -171,18 +206,41 @@ const Index = () => {
       <AnimatedSection delay={0.4}>
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Build Something Amazing?
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Let's discuss your project and bring your ideas to life with cutting-edge technology
-              </p>
-              <Button asChild size="lg" className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 hover:scale-105 transition-all duration-300">
-                <Link to="/contact">
-                  Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+                className="space-y-8"
+              >
+                <div className="text-sm font-mono text-cyan-400 tracking-wider">
+                  &gt; READY TO INNOVATE?
+                </div>
+                
+                <h2 className="text-4xl md:text-6xl font-black">
+                  <GlitchText 
+                    text="LET'S BUILD THE FUTURE" 
+                    className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                    glitchChance={0.005}
+                  />
+                </h2>
+                
+                <p className="text-lg text-muted-foreground font-mono max-w-2xl mx-auto">
+                  Whether you need AI integration, full-stack development, or algorithmic solutions - 
+                  let's create something extraordinary together.
+                </p>
+                
+                <Button 
+                  asChild 
+                  size="lg" 
+                  className="bg-gradient-to-r from-green-500 to-cyan-600 hover:from-green-600 hover:to-cyan-700 text-black font-bold border-0 hover:scale-105 transition-all duration-300 shadow-lg shadow-green-500/25"
+                >
+                  <Link to="/contact">
+                    INITIALIZE_PROJECT.sh <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
             </div>
           </div>
         </section>
