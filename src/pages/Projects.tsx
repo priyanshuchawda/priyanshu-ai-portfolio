@@ -21,7 +21,7 @@ const Projects = () => {
       tags: ["AI", "React", "Node.js", "OpenAI"],
       category: "AI",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const Projects = () => {
       tags: ["Automation", "Python", "Machine Learning", "FastAPI"],
       category: "Automation",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ const Projects = () => {
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       category: "Web App",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ const Projects = () => {
       tags: ["AI", "NLP", "Speech Recognition", "Python"],
       category: "AI",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
     {
       id: 5,
@@ -61,7 +61,7 @@ const Projects = () => {
       tags: ["React", "D3.js", "Python", "Data Science"],
       category: "Web App",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
     {
       id: 6,
@@ -71,7 +71,7 @@ const Projects = () => {
       tags: ["Blockchain", "Solidity", "Web3", "React"],
       category: "Web App",
       github: "https://github.com/priyanshuchawda",
-      demo: "https://priyanshutech.xyz",
+      demo: "https://www.priyanshutech.xyz",
     },
   ];
 

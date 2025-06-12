@@ -18,8 +18,8 @@ const SEOHead = ({
   title = "Priyanshu Chawda - AI & Full-Stack Developer | Portfolio",
   description = "Priyanshu Chawda is an AI & Full-Stack Developer who builds intelligent solutions and scalable applications. Expert in Python, React, Machine Learning, and more.",
   keywords = "Priyanshu Chawda, AI Developer, Full-Stack Developer, Machine Learning, Python, React, Portfolio, Freelance Developer, Web Development, AI Solutions",
-  image = "https://priyanshutech.xyz/og-image.jpg",
-  url = "https://priyanshutech.xyz",
+  image = "https://www.priyanshutech.xyz/og-image.jpg",
+  url = "https://www.priyanshutech.xyz",
   type = "website",
   author = "Priyanshu Chawda",
   publishedTime,
@@ -135,12 +135,12 @@ const SEOHead = ({
       "author": {
         "@type": "Person",
         "name": author,
-        "url": "https://priyanshutech.xyz"
+        "url": "https://www.priyanshutech.xyz"
       },
       "publisher": {
         "@type": "Person",
         "name": "Priyanshu Chawda",
-        "url": "https://priyanshutech.xyz"
+        "url": "https://www.priyanshutech.xyz"
       },
       "datePublished": publishedTime,
       "dateModified": modifiedTime || publishedTime,

@@ -1,7 +1,7 @@
 
 # Priyanshu Chawda - AI & Full-Stack Developer Portfolio
 
-🌐 **Live Website**: [priyanshutech.xyz](https://priyanshutech.xyz)
+🌐 **Live Website**: [priyanshutech.xyz](https://www.priyanshutech.xyz)
 
 ## About
 
@@ -131,7 +131,7 @@ The contact form is powered by Netlify Forms, which provides:
 
 ## Connect
 
-- 🌐 **Website**: [priyanshutech.xyz](https://priyanshutech.xyz)
+- 🌐 **Website**: [priyanshutech.xyz](https://www.priyanshutech.xyz)
 - 🐙 **GitHub**: [github.com/priyanshuchawda](https://github.com/priyanshuchawda)
 - 💼 **LinkedIn**: [linkedin.com/in/priyanshuchawda](https://linkedin.com/in/priyanshuchawda)
 - 🐦 **Twitter/X**: [x.com/priyanshu_tech4](https://x.com/priyanshu_tech4)
