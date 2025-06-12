@@ -1,73 +1,106 @@
-# Welcome to your Lovable project
 
-## Project info
+# Priyanshu Chawda - AI & Full-Stack Developer Portfolio
 
-**URL**: https://lovable.dev/projects/a89ec80c-7441-443c-8aa9-4f84e65ce6be
+🌐 **Live Website**: [priyanshutech.xyz](https://priyanshutech.xyz)
 
-## How can I edit this code?
+## About
 
-There are several ways of editing your application.
+This is the portfolio website of Priyanshu Chawda, an AI & Full-Stack Developer who builds intelligent solutions and scalable applications. The website showcases projects, skills, and expertise in Python, React, Machine Learning, and modern web technologies.
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a89ec80c-7441-443c-8aa9-4f84e65ce6be) and start prompting.
+- **Cyberpunk-themed Design**: Unique neural network background with glitch effects
+- **Responsive & Fast**: Optimized for all devices with excellent performance
+- **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards, and structured data
+- **PWA Ready**: Progressive Web App with manifest and service worker
+- **Modern Tech Stack**: Built with React, TypeScript, Tailwind CSS, and Vite
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **UI Components**: shadcn/ui, Radix UI
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Build Tool**: Vite
+- **Deployment**: Vercel
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```
+src/
+├── components/         # Reusable UI components
+│   ├── ui/            # shadcn/ui components
+│   ├── Navigation.tsx # Main navigation
+│   ├── Footer.tsx     # Site footer
+│   ├── SEOHead.tsx    # SEO meta tags component
+│   └── ...
+├── pages/             # Main application pages
+│   ├── Index.tsx      # Home page
+│   ├── Projects.tsx   # Projects showcase
+│   ├── Skills.tsx     # Skills and expertise
+│   ├── Contact.tsx    # Contact form and info
+│   ├── Resume.tsx     # Resume/CV page
+│   └── NotFound.tsx   # 404 page
+└── lib/               # Utility functions
+```
 
-Follow these steps:
+## Getting Started
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js (v18 or higher)
+- npm or yarn
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Installation
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1. Clone the repository:
+```bash
+git clone https://github.com/priyanshuchawda/priyanshutech-portfolio
+cd priyanshutech-portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open [http://localhost:8080](http://localhost:8080) to view the site
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## SEO & Performance
 
-## What technologies are used for this project?
+The website includes comprehensive SEO optimizations:
 
-This project is built with:
+- ✅ Semantic HTML structure
+- ✅ Meta tags and Open Graph
+- ✅ Twitter Card support
+- ✅ JSON-LD structured data
+- ✅ Sitemap and robots.txt
+- ✅ PWA manifest
+- ✅ Optimized images and lazy loading
+- ✅ Fast loading times
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Connect
 
-## How can I deploy this project?
+- 🌐 **Website**: [priyanshutech.xyz](https://priyanshutech.xyz)
+- 🐙 **GitHub**: [github.com/priyanshuchawda](https://github.com/priyanshuchawda)
+- 💼 **LinkedIn**: [linkedin.com/in/priyanshuchawda](https://linkedin.com/in/priyanshuchawda)
+- 🐦 **Twitter/X**: [x.com/priyanshu_tech4](https://x.com/priyanshu_tech4)
 
-Simply open [Lovable](https://lovable.dev/projects/a89ec80c-7441-443c-8aa9-4f84e65ce6be) and click on Share -> Publish.
+## License
 
-## Can I connect a custom domain to my Lovable project?
+This project is open source and available under the [MIT License](LICENSE).
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Built with ❤️ by Priyanshu Chawda using modern web technologies.

@@ -141,14 +141,13 @@ const Skills = () => {
                             viewport={{ once: true }}
                             className="space-y-2"
                           >
-                            <div className="flex items-center justify-between">
-                              <span className="flex items-center gap-2 font-medium font-mono text-gray-300">
-                                <span>{skill.icon}</span>
+                            <div className="flex items-center gap-3">
+                              <span className="text-xl">{skill.icon}</span>
+                              <span className="font-medium font-mono text-gray-300">
                                 {skill.name}
                               </span>
-                              <span className="text-sm text-cyan-400 font-mono">{skill.level}%</span>
                             </div>
-                            <div className="relative">
+                            <div className="relative ml-8">
                               <Progress 
                                 value={skill.level} 
                                 className="h-2 bg-gray-700/50"

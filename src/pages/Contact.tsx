@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Send, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import SEOHead from "@/components/SEOHead";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -163,13 +163,6 @@ const Contact = () => {
                   <CardContent className="space-y-6">
                     {[
                       {
-                        icon: Mail,
-                        title: "Email",
-                        value: "priyanshuchawda@gmail.com",
-                        href: "mailto:priyanshuchawda@gmail.com",
-                        gradient: "from-cyan-500 to-blue-500"
-                      },
-                      {
                         icon: Github,
                         title: "GitHub",
                         value: "@priyanshuchawda",
@@ -182,6 +175,13 @@ const Contact = () => {
                         value: "/in/priyanshuchawda",
                         href: "https://linkedin.com/in/priyanshuchawda",
                         gradient: "from-blue-600 to-blue-800"
+                      },
+                      {
+                        icon: Twitter,
+                        title: "Twitter / X",
+                        value: "@priyanshu_tech4",
+                        href: "https://x.com/priyanshu_tech4",
+                        gradient: "from-cyan-500 to-blue-500"
                       }
                     ].map((contact, index) => (
                       <motion.div
