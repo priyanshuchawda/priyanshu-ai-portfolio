@@ -10,6 +10,9 @@
     <meta name="author" content="Priyanshu Chawda" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="en" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -17,7 +20,10 @@
     <meta property="og:title" content="Priyanshu Chawda - AI & Full-Stack Developer | Portfolio" />
     <meta property="og:description" content="AI & Full-Stack Developer creating intelligent solutions. Expert in Python, React, Machine Learning, and modern web technologies. Available for freelance projects." />
     <meta property="og:image" content="https://priyanshutech.xyz/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Priyanshu Chawda Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -25,21 +31,36 @@
     <meta property="twitter:title" content="Priyanshu Chawda - AI & Full-Stack Developer | Portfolio" />
     <meta property="twitter:description" content="AI & Full-Stack Developer creating intelligent solutions. Expert in Python, React, Machine Learning, and modern web technologies. Available for freelance projects." />
     <meta property="twitter:image" content="https://priyanshutech.xyz/og-image.jpg" />
-    <meta property="twitter:creator" content="@priyanshuchawda" />
+    <meta property="twitter:creator" content="@priyanshu_tech4" />
+    <meta property="twitter:site" content="@priyanshu_tech4" />
 
-    <!-- Favicon -->
+    <!-- Additional Social Meta -->
+    <meta property="linkedin:owner" content="priyanshuchawda" />
+    <meta name="pinterest-rich-pin" content="true" />
+
+    <!-- Favicon and App Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00d9ff" />
+    <meta name="msapplication-TileColor" content="#0f0f23" />
+    <meta name="theme-color" content="#00d9ff" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://priyanshutech.xyz/" />
 
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+    <!-- Performance hints -->
+    <link rel="prefetch" href="/projects" />
+    <link rel="prefetch" href="/skills" />
+    <link rel="prefetch" href="/contact" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -51,10 +72,16 @@
       "description": "AI & Full-Stack Developer creating intelligent solutions. Expert in Python, React, Machine Learning, and modern web technologies.",
       "url": "https://priyanshutech.xyz",
       "image": "https://priyanshutech.xyz/og-image.jpg",
+      "email": "contact@priyanshutech.xyz",
+      "telephone": "+91-XXXXXXXXXX",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
       "sameAs": [
         "https://github.com/priyanshuchawda",
-        "https://linkedin.com/in/priyanshuchawda",
-        "https://t.me/priyanshuchawda"
+        "https://linkedin.com/in/priyanshuchawda", 
+        "https://x.com/priyanshu_tech4"
       ],
       "worksFor": {
         "@type": "Organization",
@@ -68,14 +95,81 @@
         "React",
         "JavaScript",
         "TypeScript",
-        "Web Development"
-      ]
+        "Web Development",
+        "Neural Networks",
+        "Data Science",
+        "Cloud Computing"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Educational Institution"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Software Developer",
+        "occupationLocation": {
+          "@type": "Country",
+          "name": "India"
+        }
+      }
     }
     </script>
+
+    <!-- Additional structured data for website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Priyanshu Chawda Portfolio",
+      "url": "https://priyanshutech.xyz",
+      "description": "Professional portfolio showcasing AI and full-stack development projects",
+      "publisher": {
+        "@type": "Person",
+        "name": "Priyanshu Chawda"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://priyanshutech.xyz/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Google Analytics 4 (replace with your actual GA4 tracking ID) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Microsoft Clarity (optional) -->
+    <!-- <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "XXXXXXXXX");
+    </script> -->
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function(registration) {
+              console.log('SW registered: ', registration);
+            }).catch(function(registrationError) {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

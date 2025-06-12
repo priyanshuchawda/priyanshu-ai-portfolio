@@ -7,27 +7,47 @@ interface SEOHeadProps {
   keywords?: string;
   image?: string;
   url?: string;
+  type?: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  noindex?: boolean;
 }
 
 const SEOHead = ({
   title = "Priyanshu Chawda - AI & Full-Stack Developer | Portfolio",
   description = "Priyanshu Chawda is an AI & Full-Stack Developer who builds intelligent solutions and scalable applications. Expert in Python, React, Machine Learning, and more.",
   keywords = "Priyanshu Chawda, AI Developer, Full-Stack Developer, Machine Learning, Python, React, Portfolio, Freelance Developer, Web Development, AI Solutions",
-  image = "/api/og-image",
-  url = "https://priyanshutech.xyz"
+  image = "https://priyanshutech.xyz/og-image.jpg",
+  url = "https://priyanshutech.xyz",
+  type = "website",
+  author = "Priyanshu Chawda",
+  publishedTime,
+  modifiedTime,
+  noindex = false
 }: SEOHeadProps) => {
   useEffect(() => {
     // Update document title
     document.title = title;
 
     // Update meta tags
-    const updateMetaTag = (name: string, content: string, property = false) => {
-      const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+    const updateMetaTag = (name: string, content: string, property = false, httpEquiv = false) => {
+      let selector: string;
+      if (httpEquiv) {
+        selector = `meta[http-equiv="${name}"]`;
+      } else if (property) {
+        selector = `meta[property="${name}"]`;
+      } else {
+        selector = `meta[name="${name}"]`;
+      }
+      
       let meta = document.querySelector(selector) as HTMLMetaElement;
       
       if (!meta) {
         meta = document.createElement("meta");
-        if (property) {
+        if (httpEquiv) {
+          meta.setAttribute("http-equiv", name);
+        } else if (property) {
           meta.setAttribute("property", name);
         } else {
           meta.setAttribute("name", name);
@@ -40,28 +60,50 @@ const SEOHead = ({
     // Basic meta tags
     updateMetaTag("description", description);
     updateMetaTag("keywords", keywords);
-    updateMetaTag("author", "Priyanshu Chawda");
+    updateMetaTag("author", author);
     updateMetaTag("viewport", "width=device-width, initial-scale=1.0");
+    updateMetaTag("robots", noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+    updateMetaTag("googlebot", noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1");
+    updateMetaTag("bingbot", noindex ? "noindex, nofollow" : "index, follow");
 
     // Open Graph tags
     updateMetaTag("og:title", title, true);
     updateMetaTag("og:description", description, true);
     updateMetaTag("og:image", image, true);
+    updateMetaTag("og:image:width", "1200", true);
+    updateMetaTag("og:image:height", "630", true);
     updateMetaTag("og:url", url, true);
-    updateMetaTag("og:type", "website", true);
+    updateMetaTag("og:type", type, true);
     updateMetaTag("og:site_name", "Priyanshu Chawda Portfolio", true);
+    updateMetaTag("og:locale", "en_US", true);
+
+    // Article specific tags
+    if (type === "article" && publishedTime) {
+      updateMetaTag("article:published_time", publishedTime, true);
+    }
+    if (type === "article" && modifiedTime) {
+      updateMetaTag("article:modified_time", modifiedTime, true);
+    }
+    if (type === "article") {
+      updateMetaTag("article:author", author, true);
+    }
 
     // Twitter Card tags
     updateMetaTag("twitter:card", "summary_large_image");
     updateMetaTag("twitter:title", title);
     updateMetaTag("twitter:description", description);
     updateMetaTag("twitter:image", image);
-    updateMetaTag("twitter:creator", "@priyanshuchawda");
+    updateMetaTag("twitter:creator", "@priyanshu_tech4");
+    updateMetaTag("twitter:site", "@priyanshu_tech4");
 
     // Additional SEO tags
-    updateMetaTag("robots", "index, follow");
     updateMetaTag("language", "en");
     updateMetaTag("revisit-after", "7 days");
+    updateMetaTag("theme-color", "#00d9ff");
+    updateMetaTag("msapplication-TileColor", "#0f0f23");
+
+    // LinkedIn specific
+    updateMetaTag("linkedin:owner", "priyanshuchawda", true);
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -72,44 +114,52 @@ const SEOHead = ({
     }
     canonical.setAttribute("href", url);
 
-    // JSON-LD Structured Data
-    const structuredData = {
+    // Alternate URLs for different languages (if needed in future)
+    let alternate = document.querySelector('link[rel="alternate"][hreflang="en"]') as HTMLLinkElement;
+    if (!alternate) {
+      alternate = document.createElement("link");
+      alternate.setAttribute("rel", "alternate");
+      alternate.setAttribute("hreflang", "en");
+      document.head.appendChild(alternate);
+    }
+    alternate.setAttribute("href", url);
+
+    // JSON-LD Structured Data for the current page
+    const currentPageData = {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Priyanshu Chawda",
-      "jobTitle": "AI & Full-Stack Developer",
+      "@type": type === "article" ? "Article" : "WebPage",
+      "name": title,
       "description": description,
       "url": url,
       "image": image,
-      "sameAs": [
-        "https://github.com/priyanshuchawda",
-        "https://linkedin.com/in/priyanshuchawda",
-        "https://t.me/priyanshuchawda"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
+      "author": {
+        "@type": "Person",
+        "name": author,
+        "url": "https://priyanshutech.xyz"
       },
-      "knowsAbout": [
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Full-Stack Development",
-        "Python",
-        "React",
-        "JavaScript",
-        "TypeScript"
-      ]
+      "publisher": {
+        "@type": "Person",
+        "name": "Priyanshu Chawda",
+        "url": "https://priyanshutech.xyz"
+      },
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime || publishedTime,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": url
+      }
     };
 
-    let script = document.querySelector('script[type="application/ld+json"]');
-    if (!script) {
-      script = document.createElement("script");
-      script.setAttribute("type", "application/ld+json");
-      document.head.appendChild(script);
+    let pageScript = document.querySelector('script[data-page-schema]');
+    if (!pageScript) {
+      pageScript = document.createElement("script");
+      pageScript.setAttribute("type", "application/ld+json");
+      pageScript.setAttribute("data-page-schema", "true");
+      document.head.appendChild(pageScript);
     }
-    script.textContent = JSON.stringify(structuredData);
+    pageScript.textContent = JSON.stringify(currentPageData);
 
-  }, [title, description, keywords, image, url]);
+  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, noindex]);
 
   return null;
 };
