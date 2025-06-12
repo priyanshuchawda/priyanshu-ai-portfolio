@@ -3,3 +3,4 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://www.priyanshutech.xyz/sitemap.xml
+Sitemap: https://www.priyanshutech.xyz/sitemap.txt
