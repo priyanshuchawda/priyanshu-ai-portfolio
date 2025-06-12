@@ -19,7 +19,7 @@ const Resume = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 dark:bg-black transition-colors duration-300">
       <SEOHead 
         title="Resume - Priyanshu Chawda | AI & Full-Stack Developer"
         description="Download Priyanshu Chawda's resume showcasing AI development, full-stack expertise, professional experience, education, and achievements."
@@ -82,46 +82,20 @@ const Resume = () => {
                   <CardTitle className="text-xl font-bold font-mono text-purple-300">Professional Experience</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  {[
-                    {
-                      title: "Senior AI Developer",
-                      company: "TechCorp Solutions",
-                      period: "2023 - Present",
-                      description: "Leading AI initiatives and developing machine learning solutions for enterprise clients.",
-                      color: "cyan"
-                    },
-                    {
-                      title: "Full-Stack Developer", 
-                      company: "Innovation Labs",
-                      period: "2022 - 2023",
-                      description: "Built scalable web applications using React, Node.js, and cloud technologies.",
-                      color: "purple"
-                    },
-                    {
-                      title: "Software Engineering Intern",
-                      company: "StartupXYZ",
-                      period: "2021 - 2022", 
-                      description: "Developed REST APIs and contributed to frontend development using modern frameworks.",
-                      color: "green"
-                    }
-                  ].map((job, index) => (
-                    <motion.div
-                      key={job.title}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className={`border-l-2 pl-4 ${
-                        job.color === 'cyan' ? 'border-cyan-500' :
-                        job.color === 'purple' ? 'border-purple-500' : 
-                        'border-green-500'
-                      }`}
-                    >
-                      <h3 className="font-bold font-mono text-gray-200">{job.title}</h3>
-                      <p className="text-sm text-gray-400 font-mono">{job.company} • {job.period}</p>
-                      <p className="text-sm mt-2 text-gray-300 font-mono">{job.description}</p>
-                    </motion.div>
-                  ))}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="border-l-2 border-cyan-500 pl-4"
+                  >
+                    <h3 className="font-bold font-mono text-gray-200">AI & Full-Stack Developer</h3>
+                    <p className="text-sm text-gray-400 font-mono">Freelance & Open Source • 2020 - Present</p>
+                    <p className="text-sm mt-2 text-gray-300 font-mono">
+                      Specializing in AI development, web applications, and modern tech solutions. 
+                      Passionate about creating innovative digital experiences.
+                    </p>
+                  </motion.div>
                 </CardContent>
               </Card>
             </AnimatedSection>
@@ -130,29 +104,29 @@ const Resume = () => {
             <AnimatedSection delay={0.6}>
               <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-green-500/50 transition-all duration-500 h-full">
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold font-mono text-green-300">Education & Certifications</CardTitle>
+                  <CardTitle className="text-xl font-bold font-mono text-green-300">Skills & Learning</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {[
                     {
-                      title: "B.Tech Computer Science",
-                      institution: "Indian Institute of Technology",
-                      period: "2018 - 2022",
-                      description: "CGPA: 8.7/10 • Major in AI & Machine Learning",
+                      title: "Self-Taught Developer",
+                      institution: "Online Learning & Practice",
+                      period: "2020 - Present",
+                      description: "Continuous learning through projects, documentation, and hands-on experience",
                       color: "cyan"
                     },
                     {
-                      title: "AWS Solutions Architect",
-                      institution: "Amazon Web Services", 
-                      period: "2023",
-                      description: "Professional certification in cloud architecture and deployment.",
+                      title: "Modern Web Development",
+                      institution: "Various Platforms", 
+                      period: "2021 - Present",
+                      description: "Mastering React, TypeScript, AI technologies, and full-stack development",
                       color: "purple"
                     },
                     {
-                      title: "Deep Learning Specialization",
-                      institution: "Coursera (Andrew Ng)",
-                      period: "2022",
-                      description: "Comprehensive course on neural networks and deep learning.",
+                      title: "AI & Machine Learning",
+                      institution: "Open Source & Projects",
+                      period: "2022 - Present",
+                      description: "Building AI applications and exploring modern machine learning frameworks",
                       color: "green"
                     }
                   ].map((edu, index) => (
@@ -188,9 +162,9 @@ const Resume = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-3">
                     {[
-                      "Published 3 research papers in AI conferences",
-                      "Winner of National Hackathon 2023", 
-                      "Led team of 8 developers in major project"
+                      "Built 20+ modern web applications",
+                      "Expert in React, TypeScript & AI integration", 
+                      "Active open source contributor"
                     ].map((achievement, index) => (
                       <motion.div
                         key={achievement}
@@ -207,9 +181,9 @@ const Resume = () => {
                   </div>
                   <div className="space-y-3">
                     {[
-                      "50+ open source contributions on GitHub",
-                      "Expert rating in competitive programming",
-                      "Mentored 20+ junior developers"
+                      "Proficient in modern development tools",
+                      "Focus on user experience & performance",
+                      "Passionate about learning new technologies"
                     ].map((achievement, index) => (
                       <motion.div
                         key={achievement}

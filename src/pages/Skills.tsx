@@ -72,14 +72,14 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 dark:bg-black transition-colors duration-300">
       <SEOHead 
         title="Skills - Priyanshu Chawda | AI & Full-Stack Developer"
         description="Comprehensive overview of Priyanshu Chawda's technical skills including AI/ML, full-stack development, cloud technologies, and programming languages."
         keywords="AI skills, machine learning, Python, React, full-stack developer skills, cloud computing, web development technologies"
       />
       
-      <div className="min-h-screen pt-24 pb-16 px-4" style={{ scrollBehavior: 'smooth' }}>
+      <div className="min-h-screen pt-24 pb-16 px-4 smooth-scroll">
         <div className="container mx-auto">
           <AnimatedSection>
             <div className="text-center mb-16">

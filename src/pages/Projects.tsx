@@ -82,7 +82,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 dark:bg-black transition-colors duration-300">
       <SEOHead 
         title="Projects - Priyanshu Chawda | AI & Full-Stack Developer"
         description="Explore AI-powered tools, full-stack applications, and innovative solutions built by Priyanshu Chawda. From machine learning projects to web applications."

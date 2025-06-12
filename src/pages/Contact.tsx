@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 dark:bg-black transition-colors duration-300">
       <SEOHead 
         title="Contact - Priyanshu Chawda | AI & Full-Stack Developer"
         description="Get in touch with Priyanshu Chawda for AI development, full-stack projects, and freelance opportunities. Available for consulting and custom solutions."

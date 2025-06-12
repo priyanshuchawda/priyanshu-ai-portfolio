@@ -22,13 +22,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+    <div className="min-h-screen relative overflow-hidden bg-slate-900 dark:bg-black transition-colors duration-300">
       <SEOHead 
         title="Priyanshu Chawda - AI & Full-Stack Developer | Portfolio"
         description="AI & Full-Stack Developer creating intelligent solutions. Expert in Python, React, Machine Learning, and modern web technologies. Available for freelance projects."
         keywords="Priyanshu Chawda, AI Developer, Full-Stack Developer, Machine Learning, Python, React, Portfolio, Freelance"
       />
-      <NeuralBackground />
       
       {/* Cyberpunk Hero Section */}
       <section className="pt-32 pb-20 px-4 relative">
@@ -128,12 +127,12 @@ const Index = () => {
                 className="flex gap-6"
               >
                 <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300 text-cyan-400 hover:text-cyan-300">
-                  <a href="https://github.com/priyanshuchawda" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/priyanshuchawda" target="_blank" rel="noopener noreferrer" title="Visit GitHub Profile">
                     <Github className="h-6 w-6" />
                   </a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="hover:scale-110 transition-all duration-300 text-cyan-400 hover:text-cyan-300">
-                  <a href="https://linkedin.com/in/priyanshuchawda" target="_blank" rel="noopener noreferrer">
+                  <a href="https://linkedin.com/in/priyanshuchawda" target="_blank" rel="noopener noreferrer" title="Visit LinkedIn Profile">
                     <Linkedin className="h-6 w-6" />
                   </a>
                 </Button>

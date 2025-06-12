@@ -31,7 +31,7 @@ const Footer = () => {
           </div>
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground">
-              © 2024 Priyanshu Chawda. All rights reserved.
+              © 2025 Priyanshu Chawda. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               Built with 💻 by Priyanshu
