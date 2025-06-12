@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Download, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEOHead from "@/components/SEOHead";
+import AnimatedSection from "@/components/AnimatedSection";
+import GlitchText from "@/components/GlitchText";
+import { motion } from "framer-motion";
 
 const Resume = () => {
   const { toast } = useToast();
@@ -15,147 +19,244 @@ const Resume = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Resume
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Download my complete resume or view my professional experience and qualifications
-          </p>
-        </div>
-
-        {/* Download Section */}
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50 mb-12">
-          <CardContent className="p-8 text-center">
-            <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Download className="h-10 w-10 text-white" />
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 dark:from-black dark:via-purple-950/30 dark:to-black">
+      <SEOHead 
+        title="Resume - Priyanshu Chawda | AI & Full-Stack Developer"
+        description="Download Priyanshu Chawda's resume showcasing AI development, full-stack expertise, professional experience, education, and achievements."
+        keywords="Priyanshu Chawda resume, AI developer CV, full-stack developer resume, download resume, professional experience"
+      />
+      
+      <div className="min-h-screen pt-24 pb-16 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <AnimatedSection>
+            <div className="text-center mb-16">
+              <div className="text-sm font-mono text-cyan-400 dark:text-cyan-300 tracking-wider mb-4">
+                &gt; PROFESSIONAL_PROFILE.load()
+              </div>
+              <h1 className="text-4xl md:text-6xl font-black mb-6">
+                <GlitchText 
+                  text="RESUME" 
+                  className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                  glitchChance={0.01}
+                />
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-mono">
+                Download my complete resume or view my professional experience and qualifications
+              </p>
             </div>
-            <h2 className="text-2xl font-semibold mb-4">Download Resume</h2>
-            <p className="text-muted-foreground mb-6">
-              Get the complete PDF version of my resume with detailed experience, projects, and achievements
-            </p>
-            <Button 
-              size="lg" 
-              onClick={handleDownload}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download PDF Resume
-            </Button>
-          </CardContent>
-        </Card>
+          </AnimatedSection>
 
-        {/* Resume Preview */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Experience */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold">Professional Experience</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="border-l-2 border-blue-500 pl-4">
-                <h3 className="font-semibold">Senior AI Developer</h3>
-                <p className="text-sm text-muted-foreground">TechCorp Solutions • 2023 - Present</p>
-                <p className="text-sm mt-2">Leading AI initiatives and developing machine learning solutions for enterprise clients.</p>
-              </div>
-              
-              <div className="border-l-2 border-purple-500 pl-4">
-                <h3 className="font-semibold">Full-Stack Developer</h3>
-                <p className="text-sm text-muted-foreground">Innovation Labs • 2022 - 2023</p>
-                <p className="text-sm mt-2">Built scalable web applications using React, Node.js, and cloud technologies.</p>
-              </div>
-              
-              <div className="border-l-2 border-green-500 pl-4">
-                <h3 className="font-semibold">Software Engineering Intern</h3>
-                <p className="text-sm text-muted-foreground">StartupXYZ • 2021 - 2022</p>
-                <p className="text-sm mt-2">Developed REST APIs and contributed to frontend development using modern frameworks.</p>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Download Section */}
+          <AnimatedSection delay={0.2}>
+            <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-cyan-500/50 transition-all duration-500 mb-12">
+              <CardContent className="p-8 text-center">
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"
+                >
+                  <Download className="h-10 w-10 text-white" />
+                </motion.div>
+                <h2 className="text-2xl font-bold mb-4 font-mono text-cyan-300">Download Resume</h2>
+                <p className="text-gray-300 mb-6 font-mono">
+                  Get the complete PDF version of my resume with detailed experience, projects, and achievements
+                </p>
+                <Button 
+                  size="lg" 
+                  onClick={handleDownload}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-black font-bold border-0 hover:scale-105 transition-all duration-300 shadow-lg shadow-cyan-500/25 font-mono"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  DOWNLOAD_RESUME.pdf
+                </Button>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
 
-          {/* Education */}
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold">Education & Certifications</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="border-l-2 border-blue-500 pl-4">
-                <h3 className="font-semibold">B.Tech Computer Science</h3>
-                <p className="text-sm text-muted-foreground">Indian Institute of Technology • 2018 - 2022</p>
-                <p className="text-sm mt-2">CGPA: 8.7/10 • Major in AI & Machine Learning</p>
-              </div>
-              
-              <div className="border-l-2 border-purple-500 pl-4">
-                <h3 className="font-semibold">AWS Solutions Architect</h3>
-                <p className="text-sm text-muted-foreground">Amazon Web Services • 2023</p>
-                <p className="text-sm mt-2">Professional certification in cloud architecture and deployment.</p>
-              </div>
-              
-              <div className="border-l-2 border-green-500 pl-4">
-                <h3 className="font-semibold">Deep Learning Specialization</h3>
-                <p className="text-sm text-muted-foreground">Coursera (Andrew Ng) • 2022</p>
-                <p className="text-sm mt-2">Comprehensive course on neural networks and deep learning.</p>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Resume Preview */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Experience */}
+            <AnimatedSection delay={0.4}>
+              <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-purple-500/50 transition-all duration-500 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold font-mono text-purple-300">Professional Experience</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {[
+                    {
+                      title: "Senior AI Developer",
+                      company: "TechCorp Solutions",
+                      period: "2023 - Present",
+                      description: "Leading AI initiatives and developing machine learning solutions for enterprise clients.",
+                      color: "cyan"
+                    },
+                    {
+                      title: "Full-Stack Developer", 
+                      company: "Innovation Labs",
+                      period: "2022 - 2023",
+                      description: "Built scalable web applications using React, Node.js, and cloud technologies.",
+                      color: "purple"
+                    },
+                    {
+                      title: "Software Engineering Intern",
+                      company: "StartupXYZ",
+                      period: "2021 - 2022", 
+                      description: "Developed REST APIs and contributed to frontend development using modern frameworks.",
+                      color: "green"
+                    }
+                  ].map((job, index) => (
+                    <motion.div
+                      key={job.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className={`border-l-2 pl-4 ${
+                        job.color === 'cyan' ? 'border-cyan-500' :
+                        job.color === 'purple' ? 'border-purple-500' : 
+                        'border-green-500'
+                      }`}
+                    >
+                      <h3 className="font-bold font-mono text-gray-200">{job.title}</h3>
+                      <p className="text-sm text-gray-400 font-mono">{job.company} • {job.period}</p>
+                      <p className="text-sm mt-2 text-gray-300 font-mono">{job.description}</p>
+                    </motion.div>
+                  ))}
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+
+            {/* Education */}
+            <AnimatedSection delay={0.6}>
+              <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-green-500/50 transition-all duration-500 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl font-bold font-mono text-green-300">Education & Certifications</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {[
+                    {
+                      title: "B.Tech Computer Science",
+                      institution: "Indian Institute of Technology",
+                      period: "2018 - 2022",
+                      description: "CGPA: 8.7/10 • Major in AI & Machine Learning",
+                      color: "cyan"
+                    },
+                    {
+                      title: "AWS Solutions Architect",
+                      institution: "Amazon Web Services", 
+                      period: "2023",
+                      description: "Professional certification in cloud architecture and deployment.",
+                      color: "purple"
+                    },
+                    {
+                      title: "Deep Learning Specialization",
+                      institution: "Coursera (Andrew Ng)",
+                      period: "2022",
+                      description: "Comprehensive course on neural networks and deep learning.",
+                      color: "green"
+                    }
+                  ].map((edu, index) => (
+                    <motion.div
+                      key={edu.title}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className={`border-l-2 pl-4 ${
+                        edu.color === 'cyan' ? 'border-cyan-500' :
+                        edu.color === 'purple' ? 'border-purple-500' :
+                        'border-green-500'
+                      }`}
+                    >
+                      <h3 className="font-bold font-mono text-gray-200">{edu.title}</h3>
+                      <p className="text-sm text-gray-400 font-mono">{edu.institution} • {edu.period}</p>
+                      <p className="text-sm mt-2 text-gray-300 font-mono">{edu.description}</p>
+                    </motion.div>
+                  ))}
+                </CardContent>
+              </Card>
+            </AnimatedSection>
+          </div>
+
+          {/* Key Achievements */}
+          <AnimatedSection delay={0.8}>
+            <Card className="bg-black/40 backdrop-blur-sm border-gray-800 hover:border-pink-500/50 transition-all duration-500 mt-8">
+              <CardHeader>
+                <CardTitle className="text-xl font-bold font-mono text-pink-300">Key Achievements</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
+                    {[
+                      "Published 3 research papers in AI conferences",
+                      "Winner of National Hackathon 2023", 
+                      "Led team of 8 developers in major project"
+                    ].map((achievement, index) => (
+                      <motion.div
+                        key={achievement}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center space-x-3"
+                      >
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-mono text-gray-300">{achievement}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      "50+ open source contributions on GitHub",
+                      "Expert rating in competitive programming",
+                      "Mentored 20+ junior developers"
+                    ].map((achievement, index) => (
+                      <motion.div
+                        key={achievement}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+                        viewport={{ once: true }}
+                        className="flex items-center space-x-3"
+                      >
+                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <span className="text-sm font-mono text-gray-300">{achievement}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          {/* Portfolio Link */}
+          <AnimatedSection delay={1.0}>
+            <Card className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-500 mt-8">
+              <CardContent className="p-8 text-center">
+                <h2 className="text-xl font-bold mb-4 font-mono text-cyan-300">
+                  <GlitchText 
+                    text="Explore My Work"
+                    className="text-cyan-300"
+                    glitchChance={0.005}
+                  />
+                </h2>
+                <p className="text-gray-300 mb-6 font-mono">
+                  Want to see my projects in action? Check out my complete portfolio
+                </p>
+                <Button 
+                  variant="outline" 
+                  asChild
+                  className="border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-300 font-mono"
+                >
+                  <a href="/projects">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    VIEW_PORTFOLIO.exe
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </AnimatedSection>
         </div>
-
-        {/* Key Achievements */}
-        <Card className="bg-card/50 backdrop-blur-sm border-border/50 mt-8">
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold">Key Achievements</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-sm">Published 3 research papers in AI conferences</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                  <span className="text-sm">Winner of National Hackathon 2023</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm">Led team of 8 developers in major project</span>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                  <span className="text-sm">50+ open source contributions on GitHub</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  <span className="text-sm">Expert rating in competitive programming</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-teal-500 rounded-full"></div>
-                  <span className="text-sm">Mentored 20+ junior developers</span>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Portfolio Link */}
-        <Card className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-blue-500/20 mt-8">
-          <CardContent className="p-8 text-center">
-            <h2 className="text-xl font-semibold mb-4">Explore My Work</h2>
-            <p className="text-muted-foreground mb-6">
-              Want to see my projects in action? Check out my complete portfolio
-            </p>
-            <Button variant="outline" asChild>
-              <a href="/projects">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                View Portfolio
-              </a>
-            </Button>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );
