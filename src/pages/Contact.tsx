@@ -24,13 +24,11 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Simulate form submission
+    // Form will be handled by Netlify
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. I'll get back to you soon!",
     });
-    
-    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -83,7 +81,15 @@ const Contact = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form 
+                      name="contact" 
+                      method="POST" 
+                      data-netlify="true" 
+                      onSubmit={handleSubmit} 
+                      className="space-y-6"
+                    >
+                      <input type="hidden" name="form-name" value="contact" />
+                      
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <Label htmlFor="name" className="font-mono text-gray-300">Name</Label>

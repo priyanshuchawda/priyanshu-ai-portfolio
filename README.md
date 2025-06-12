@@ -14,6 +14,7 @@ This is the portfolio website of Priyanshu Chawda, an AI & Full-Stack Developer 
 - **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards, and structured data
 - **PWA Ready**: Progressive Web App with manifest and service worker
 - **Modern Tech Stack**: Built with React, TypeScript, Tailwind CSS, and Vite
+- **Netlify Forms**: Contact form powered by Netlify for seamless communication
 
 ## Technologies Used
 
@@ -22,7 +23,8 @@ This is the portfolio website of Priyanshu Chawda, an AI & Full-Stack Developer 
 - **Animations**: Framer Motion
 - **Icons**: Lucide React
 - **Build Tool**: Vite
-- **Deployment**: Vercel
+- **Deployment**: Netlify
+- **Domain**: priyanshutech.xyz
 
 ## Project Structure
 
@@ -77,6 +79,26 @@ npm run dev
 npm run build
 ```
 
+## Deployment
+
+The website is deployed on Netlify with the following features:
+
+### Netlify Configuration
+- **Domain**: priyanshutech.xyz
+- **Form Handling**: Contact forms processed by Netlify Forms
+- **Build Command**: `npm run build`
+- **Publish Directory**: `dist`
+- **Continuous Deployment**: Connected to GitHub repository
+
+### Deployment Steps
+1. Push code to GitHub repository
+2. Connect repository to Netlify
+3. Configure build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Set up custom domain (priyanshutech.xyz)
+5. Enable Netlify Forms for contact functionality
+
 ## SEO & Performance
 
 The website includes comprehensive SEO optimizations:
@@ -89,6 +111,23 @@ The website includes comprehensive SEO optimizations:
 - ✅ PWA manifest
 - ✅ Optimized images and lazy loading
 - ✅ Fast loading times
+- ✅ Mobile-first responsive design
+
+## Contact Form
+
+The contact form is powered by Netlify Forms, which provides:
+- Spam protection
+- Form submissions dashboard
+- Email notifications
+- No backend code required
+
+## Performance Optimizations
+
+- **Smooth Scrolling**: Enhanced scroll behavior
+- **Lazy Loading**: Images and components load on demand
+- **Code Splitting**: Optimized bundle sizes
+- **Compressed Assets**: Gzip/Brotli compression
+- **CDN Delivery**: Fast global content delivery via Netlify
 
 ## Connect
 
@@ -103,4 +142,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ by Priyanshu Chawda using modern web technologies.
+Built with ❤️ by Priyanshu Chawda using modern web technologies and deployed on Netlify.
