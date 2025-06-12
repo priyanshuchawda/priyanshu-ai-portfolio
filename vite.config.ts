@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   base: "./",
   server: {
     host: "::",
-    port: 8080,
+    port: 8020,
     // Warm up commonly used files on server start for better performance
     warmup: {
       clientFiles: [

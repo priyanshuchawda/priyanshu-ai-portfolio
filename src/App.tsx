@@ -18,11 +18,8 @@ import Footer from "./components/Footer";
 const queryClient = new QueryClient();
 
 const PageWrapper = ({ children }: { children: React.ReactNode }) => {
-  const location = useLocation();
-  
   return (
     <motion.div
-      key={location.pathname}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
@@ -33,7 +30,7 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-const AppContent = () => {
+const AppRoutes = () => {
   const location = useLocation();
   
   return (
@@ -66,7 +63,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <AppContent />
+          <AppRoutes />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>

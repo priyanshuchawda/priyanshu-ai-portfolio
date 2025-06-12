@@ -44,7 +44,13 @@ const Index = () => {
                   &gt; SYSTEM INITIALIZED
                 </div>
                 
-                <h1 className="text-6xl md:text-8xl font-black leading-none">
+                {/* SEO-optimized H1 - visually hidden but accessible */}
+                <h1 className="sr-only">
+                  Priyanshu Chawda - AI & Full-Stack Developer Building Smart Tools for Real-World Impact
+                </h1>
+                
+                {/* Visual heading for design */}
+                <div className="text-6xl md:text-8xl font-black leading-none" role="presentation" aria-hidden="true">
                   <GlitchText 
                     text="PRIYANSHU" 
                     className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
@@ -55,7 +61,7 @@ const Index = () => {
                     className="block bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
                     glitchChance={0.01}
                   />
-                </h1>
+                </div>
                 
                 <div className="text-xl md:text-2xl font-mono">
                   <span className="text-green-400">&gt; </span>
