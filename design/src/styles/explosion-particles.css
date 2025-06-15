@@ -1,0 +1,134 @@
+
+/* EXPLOSION PARTICLE ANIMATIONS */
+
+@keyframes explosion-particle-0 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 200px), calc(-50% + 0px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-1 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 173px), calc(-50% + 100px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-2 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 100px), calc(-50% + 173px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-3 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 0px), calc(-50% + 200px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-4 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + -100px), calc(-50% + 173px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-5 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + -173px), calc(-50% + 100px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-6 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + -200px), calc(-50% + 0px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-7 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + -173px), calc(-50% + -100px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-8 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + -100px), calc(-50% + -173px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-9 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 0px), calc(-50% + -200px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-10 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 100px), calc(-50% + -173px)) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes explosion-particle-11 {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 173px), calc(-50% + -100px)) scale(0);
+    opacity: 0;
+  }
+}
