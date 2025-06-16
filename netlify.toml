@@ -5,6 +5,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# SPA Redirect Rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/assets/*"
   [headers.values]
