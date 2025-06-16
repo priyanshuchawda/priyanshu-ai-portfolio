@@ -15,6 +15,57 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "PIXEL - Design System & Component Library",
+      description: "A comprehensive design system showcasing modern UI components, color palettes, typography, and interactive elements with pixel-perfect precision. Features component playground, design tokens export, and theme switching capabilities.",
+      image: "/design/assets/pixel.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Design System"],
+      category: "Design",
+      github: "https://github.com/priyanshuchawda/pixel",
+      demo: "https://pixeldobble.netlify.app/",
+      featured: true,
+    },
+    {
+      id: 2,
+      title: "Interactive Loading Gallery",
+      description: "A stunning collection of interactive loading screens and animations showcasing modern design patterns. Features cyberpunk, minimalist, nature-inspired, and futuristic themes with smooth transitions and responsive design.",
+      image: "/design/assets/gallery.png",
+      tags: ["React", "TypeScript", "Tailwind CSS", "Animations", "UI/UX"],
+      category: "Design",
+      github: "https://github.com/priyanshuchawda/gallery",
+      demo: "https://dobblegallery.netlify.app/",
+    },
+    {
+      id: 3,
+      title: "Interactive UI Lab",
+      description: "An experimental playground for modern UI components featuring advanced interactions, micro-animations, and dynamic theming. Showcases cutting-edge web technologies and innovative interface patterns.",
+      image: "/design/assets/lab.png",
+      tags: ["React", "TypeScript", "Framer Motion", "UI Lab", "Micro-Interactions"],
+      category: "Design",
+      github: "https://github.com/priyanshuchawda/lab",
+      demo: "https://labdobble.netlify.app/",
+    },
+    {
+      id: 4,
+      title: "Motion Lab - Neural Interface Experience",
+      description: "An immersive cybernetic motion design showcase featuring advanced Framer Motion animations, neural boot sequences, and futuristic UI patterns. Explores the intersection of motion design and cyber-aesthetic interfaces.",
+      image: "/design/assets/motion.png",
+      tags: ["Framer Motion", "React", "Cyberpunk", "Animations", "Neural UI"],
+      category: "Design",
+      github: "https://github.com/priyanshuchawda/motion",
+      demo: "https://motiondobble.netlify.app/",
+    },
+    {
+      id: 5,
+      title: "Cursor Lab - Interactive Cursor Experiments",
+      description: "An experimental playground showcasing advanced custom cursor effects and interactions. Features meteor, blob, magnet, neon, and pixel cursors with particle systems and smooth animations that transform the traditional pointer experience.",
+      image: "/design/assets/cursor.png",
+      tags: ["React", "TypeScript", "Cursor Effects", "Animations", "Zustand"],
+      category: "Design",
+      github: "https://github.com/priyanshuchawda/cursor",
+      demo: "https://cursordobble.netlify.app/",
+    },
+    {
+      id: 6,
       title: "AI Content Generator",
       description: "Advanced AI-powered content generation tool using GPT models for blogs, social media, and marketing copy.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=400&fit=crop",
@@ -24,7 +75,7 @@ const Projects = () => {
       demo: "https://www.priyanshutech.xyz",
     },
     {
-      id: 2,
+      id: 7,
       title: "Smart Task Automation",
       description: "Intelligent task automation platform that learns user patterns and automates repetitive workflows.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop",
@@ -34,7 +85,7 @@ const Projects = () => {
       demo: "https://www.priyanshutech.xyz",
     },
     {
-      id: 3,
+      id: 8,
       title: "E-Commerce Platform",
       description: "Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop",
@@ -44,7 +95,7 @@ const Projects = () => {
       demo: "https://www.priyanshutech.xyz",
     },
     {
-      id: 4,
+      id: 9,
       title: "Voice Assistant AI",
       description: "Custom voice assistant with natural language processing and smart home integration capabilities.",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=400&fit=crop",
@@ -54,7 +105,7 @@ const Projects = () => {
       demo: "https://www.priyanshutech.xyz",
     },
     {
-      id: 5,
+      id: 10,
       title: "Data Analytics Dashboard",
       description: "Interactive dashboard for real-time data visualization and business intelligence insights.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop",
@@ -63,19 +114,9 @@ const Projects = () => {
       github: "https://github.com/priyanshuchawda",
       demo: "https://www.priyanshutech.xyz",
     },
-    {
-      id: 6,
-      title: "Blockchain Voting System",
-      description: "Secure and transparent voting system built on blockchain technology with smart contracts.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
-      tags: ["Blockchain", "Solidity", "Web3", "React"],
-      category: "Web App",
-      github: "https://github.com/priyanshuchawda",
-      demo: "https://www.priyanshutech.xyz",
-    },
   ];
 
-  const categories = ["All", "AI", "Automation", "Web App"];
+  const categories = ["All", "Design", "AI", "Automation", "Web App"];
 
   const filteredProjects = activeFilter === "All" 
     ? projects 
@@ -136,28 +177,70 @@ const Projects = () => {
                 <motion.div
                   whileHover={{ y: -10, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
+                  className={project.featured ? "md:col-span-2 lg:col-span-3" : ""}
                 >
-                  <Card className="group overflow-hidden bg-black/40 backdrop-blur-sm border-gray-800 hover:border-cyan-500/50 transition-all duration-500 h-full">
+                  <Card className={`group overflow-hidden bg-black/40 backdrop-blur-sm border-gray-800 hover:border-cyan-500/50 transition-all duration-500 h-full ${
+                    project.featured 
+                      ? "border-2 border-gradient-to-r from-cyan-500 to-purple-600 bg-gradient-to-br from-purple-900/20 to-cyan-900/20" 
+                      : ""
+                  }`}>
+                    {project.featured && (
+                      <div className="absolute top-4 left-4 z-10">
+                        <Badge className="bg-gradient-to-r from-cyan-500 to-purple-600 text-black font-bold animate-pulse">
+                          FEATURED
+                        </Badge>
+                      </div>
+                    )}
                     <div className="relative overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        className={`w-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                          project.featured ? "h-64 md:h-80" : "h-48"
+                        }`}
+                        onError={(e) => {
+                          // Fallback for PIXEL project image
+                          if (project.id === 1) {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=800&h=400&fit=crop";
+                          }
+                          // Fallback for Gallery project image
+                          if (project.id === 2) {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&h=400&fit=crop";
+                          }
+                          // Fallback for Lab project image
+                          if (project.id === 3) {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=400&fit=crop";
+                          }
+                          // Fallback for Motion Lab project image
+                          if (project.id === 4) {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=400&fit=crop";
+                          }
+                          // Fallback for Cursor Lab project image
+                          if (project.id === 5) {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop";
+                          }
+                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
                       <div className="absolute top-4 right-4">
-                        <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                        <div className={`w-3 h-3 rounded-full animate-pulse ${
+                          project.featured ? "bg-cyan-400" : "bg-green-400"
+                        }`}></div>
                       </div>
                     </div>
                     
                     <CardHeader>
-                      <CardTitle className="text-xl font-bold font-mono text-cyan-300">
+                      <CardTitle className={`font-bold font-mono text-cyan-300 ${
+                        project.featured ? "text-2xl" : "text-xl"
+                      }`}>
                         {project.title}
                       </CardTitle>
                     </CardHeader>
                     
                     <CardContent className="flex-1 flex flex-col">
-                      <p className="text-gray-300 mb-4 flex-1 font-mono text-sm leading-relaxed">
+                      <p className={`text-gray-300 mb-4 flex-1 font-mono leading-relaxed ${
+                        project.featured ? "text-base" : "text-sm"
+                      }`}>
                         {project.description}
                       </p>
                       
@@ -166,7 +249,11 @@ const Projects = () => {
                           <Badge 
                             key={tag} 
                             variant="secondary" 
-                            className="text-xs bg-purple-500/20 text-purple-300 border-purple-500/30 font-mono"
+                            className={`text-xs font-mono ${
+                              project.featured 
+                                ? "bg-gradient-to-r from-purple-500/30 to-cyan-500/30 text-cyan-200 border-cyan-400/50" 
+                                : "bg-purple-500/20 text-purple-300 border-purple-500/30"
+                            }`}
                           >
                             {tag}
                           </Badge>
@@ -180,7 +267,11 @@ const Projects = () => {
                             CODE
                           </a>
                         </Button>
-                        <Button size="sm" asChild className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-mono">
+                        <Button size="sm" asChild className={`text-white font-mono ${
+                          project.featured 
+                            ? "bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700" 
+                            : "bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700"
+                        }`}>
                           <a href={project.demo} target="_blank" rel="noopener noreferrer">
                             DEMO <ArrowRight className="ml-2 h-4 w-4" />
                           </a>
