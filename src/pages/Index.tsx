@@ -161,22 +161,16 @@ const Index = () => {
               {[
                 {
                   icon: Brain,
-                  value: "50+",
+                  value: "5+",
                   label: "AI_MODELS_DEPLOYED",
                   color: "cyan"
                 },
                 {
                   icon: Cpu,
-                  value: "1500+", 
+                  value: "50+", 
                   label: "ALGORITHMS_SOLVED",
                   color: "purple"
                 },
-                {
-                  icon: Zap,
-                  value: "99.9%",
-                  label: "SYSTEM_UPTIME",
-                  color: "green"
-                }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
